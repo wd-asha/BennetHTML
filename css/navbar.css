@@ -1,0 +1,316 @@
+.navbar {
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 2rem;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    overflow: visible;
+}
+@media screen and (max-width: 1920px) {
+    .navbar {
+       padding-left: calc(.33rem + (4 - .33) * ((100vw - 20rem) / (120 - 20)));
+       padding-right: calc(.33rem + (4 - .33) * ((100vw - 20rem) / (120 - 20)));
+       top: calc(.66rem + (2 - .66) * ((100vw - 20rem) / (120 - 20)));
+
+    }
+}
+.navbar2 {
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 2rem;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    overflow: visible;
+}
+@media screen and (max-width: 1920px) {
+    .navbar2 {
+       padding-left: calc(.33rem + (4 - .33) * ((100vw - 20rem) / (120 - 20)));
+       padding-right: calc(.33rem + (4 - .33) * ((100vw - 20rem) / (120 - 20)));
+       top: calc(.66rem + (2 - .66) * ((100vw - 20rem) / (120 - 20)));
+
+    }
+}
+
+.burger-box {
+    width: 33%;
+    padding-left: .66rem;
+    display: none;
+}
+@media screen and (max-width: 835px) {
+    .burger-box {
+        display: block;
+    }
+}
+
+.burger {
+    height: 2.1rem;
+    width: 2.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    transition: .8s;
+}
+@media screen and (max-width: 1920px) {
+    .burger {
+        height: calc(1.5rem + (2.1 - 1.5) * ((100vw - 20rem) / (120 - 20)));
+        width: calc(1.5rem + (2.1 - 1.5) * ((100vw - 20rem) / (120 - 20)));
+    }
+}
+
+
+.burger-bar {
+    width: 100%;
+    height: 5px;
+    border-radius: 2px;
+    background-color: rgb(65, 70, 111);
+}
+.burger-bar2 {
+    width: 100%;
+    height: 5px;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+.burger:hover .burger-bar {
+    background-color: rgb(25, 30, 71);
+}
+
+.nav-menu {
+    width: 43%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: .66rem;
+}
+@media screen and (max-width: 835px) {
+    .nav-menu {
+       display: none;
+    }
+}
+
+.nav-menu-item,
+.nav-menu-item-shop {
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+.nav-menu-item {
+    border: 1px solid rgb(45,50,91);
+}
+.nav-menu-item-shop {
+    border: 1px solid white;
+}
+
+.nav-menu-item:not(:last-of-type),
+.nav-menu-item-shop:not(:last-of-type) {
+    border-right: none;
+}
+
+.nav-menu-item-shop-active {
+    background-color: white;
+    color: #2d325b;
+}
+
+.nav-menu-item-shop-active a {
+    color: #2d325b;
+}
+
+.nav-link-overlay,
+.nav-link-overlay-shop {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    transform: translateY(-100%);
+    transition: .5s;
+    z-index: -1;
+}
+.nav-link-overlay {
+    background-color: #2d325b;
+}
+.nav-link-overlay-shop {
+    background-color: white;
+}
+
+.nav-link,
+.nav-link-shop {
+    padding: .5rem 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: "Roboto-Regular", sans-serif;
+    transition: .5s;
+    display: inline-block;
+    z-index: 30;
+}
+@media screen and (max-width: 1920px) {
+    .nav-link,
+    .nav-link-shop {
+        padding: calc(0rem + (.5 - 0) * ((100vw - 20rem) / (120 - 20))) calc(.66rem + (2 - .66) * ((100vw - 20rem) / (120 - 20)));
+        font-size: calc(.8rem + (1 - .8) * ((100vw - 20rem) / (120 - 20)));
+    }
+}
+
+.nav-link {
+    color: rgb(45, 50, 91);
+}
+.nav-link-shop {
+    color: white;
+}
+
+.nav-menu-item:hover .nav-link-overlay,
+.nav-menu-item-shop:hover .nav-link-overlay-shop {
+    transform: translateY(0);
+}
+
+.nav-menu-item:hover .nav-link {
+    color: white;
+}
+.nav-menu-item-shop:hover .nav-link-shop {
+    color: #2d325b;
+}
+
+.logo,
+.logo-shop {
+    text-align: center;
+}
+@media screen and (max-width: 800px) {
+    .logo,
+    .logo-shop {
+        width: 33%;
+    }
+}
+
+
+.logo a,
+.logo-shop a {
+    text-decoration: none;
+}
+
+.logo a h1,
+.logo-shop a h1 {
+    /*font-family: "Roboto-Regular", sans-serif;*/
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: .1rem;
+    transition: .5s;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+@media screen and (max-width: 1920px) {
+    .logo a h1,
+    .logo-shop a h1 {
+        font-size: calc(1rem + (2 - 1) * ((100vw - 20rem) / (120 - 20)));
+    }
+}
+
+.logo a h1 {
+    color: #2d325b;
+}
+.logo-shop a h1 {
+    color: white;
+}
+
+.navbar-cart {
+    width: 43%;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    padding-right: .66rem;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar-cart {
+        width: 33%;
+    }
+}
+
+.navbar-cart img {
+    width: 1.5rem;
+    margin-right: .5rem;
+}
+@media screen and (max-width: 1920px) {
+    .navbar-cart img {
+        width: calc(1rem + (1.5 - 1) * ((100vw - 20rem) / (120 - 20)));
+        margin-right: calc(0rem + (.5 - 0) * ((100vw - 20rem) / (120 - 20)));
+    }
+}
+
+.cart-count {
+    text-align: center;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    font-weight: 600;
+    background-color: darkred;
+    color: white;
+}
+@media screen and (max-width: 1920px) {
+    .cart-count {
+        height: calc(1rem + (2 - 1) * ((100vw - 20rem) / (120 - 20)));
+        width: calc(1rem + (2 - 1) * ((100vw - 20rem) / (120 - 20)));
+        font-size: calc(.66rem + (1 - .66) * ((100vw - 20rem) / (120 - 20)));
+        line-height: calc(1rem + (2 - 1) * ((100vw - 20rem) / (120 - 20)));
+    }
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+}
+
+.mobile-menu ul li:nth-child(1) {
+    color: white;
+    font-size: 2.33rem;
+    line-height: 2.33rem;
+    text-decoration: none;
+    transition: .8s;
+    opacity: .7;
+    cursor: pointer;
+    padding: .5rem 1.1rem;
+}
+.mobile-menu ul li:nth-child(1):hover {
+    opacity: 1;
+}
+
+.mobile-menu ul li a {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.55rem;
+    text-decoration: none;
+    transition: .8s;
+    display: block;
+    opacity: .8;
+    padding: .5rem 1.1rem;
+}
+
+.mobile-menu ul li a:hover {
+    background-color: black;
+}
